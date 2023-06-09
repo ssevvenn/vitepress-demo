@@ -2,6 +2,7 @@ module.exports = {
     title: "test",
     description: "Front end project and tips sharing",
     dest: './dist',
+    base: '/vitepress-demo/',
     themeConfig: {
       siteTitle: "测试vite",  //左上角的
       logo: "/logo.jpeg",      //左上角的logo,注意：它的路径是从public文件夹开始的，所以这里引用的是public/logo.jpg这张图
