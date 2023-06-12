@@ -1,4 +1,4 @@
----
+<!-- ---
 title: 一个简单demo
 layout: home
 hero:
@@ -26,4 +26,4 @@ features:
   - icon: 🛠️
     title: 项目分享
     details: 开源简单的前端技术DEMO
----
+--- -->
