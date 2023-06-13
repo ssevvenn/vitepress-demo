@@ -1,11 +1,11 @@
 module.exports = {
-    title: "test",
+    title: "从法链",
     description: "Front end project and tips sharing",
     dest: './dist',
     base: '/vitepress-demo/',
     themeConfig: {
       siteTitle: "从法链",  //左上角的
-      logo: "/logo.jpeg",      //左上角的logo,注意：它的路径是从public文件夹开始的，所以这里引用的是public/logo.jpg这张图
+      logo: "/logo.png",      //左上角的logo,注意：它的路径是从public文件夹开始的，所以这里引用的是public/logo.jpg这张图
       // nav: [                  //右上角的导航栏
       //   {
       //     text: "前端",             //导航标签的名字
@@ -41,22 +41,25 @@ module.exports = {
       displayAllHeaders: true,
       sidebar: [
           {
-            text: '[目录]',
-          },
-          {
-            text: '1 从法链概述',
+            text: '从法链概述',
             link: 'markdown/chapter-1/#从法链概述',
+            items: [
+            ],
           },
           {
-            text: '2 名词解释',
+            text: '名词解释',
             link: 'markdown/chapter-2/#名词解释',
+            items: [
+            ],
           },
           {
-            text: '3 调用环境',
+            text: '调用环境',
             link: 'markdown/chapter-3/#调用环境',
+            items: [
+            ],
           },
           {
-            text: '4 快速入门教程',
+            text: '快速入门教程',
             link: 'markdown/chapter-4/#快速入门教程',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
@@ -72,7 +75,7 @@ module.exports = {
             ],
           },
           {
-            text: '5 链上操作调用基本步骤',
+            text: '链上操作调用基本步骤',
             link: 'markdown/chapter-5/#链上操作调用基本步骤',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
@@ -88,7 +91,7 @@ module.exports = {
             ],
           },
           {
-            text: '6 链上操作',
+            text: '链上操作',
             link: 'markdown/chapter-6/#链上操作',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
@@ -190,7 +193,7 @@ module.exports = {
             ],
           },
           {
-            text: '7 HTTP API参考',
+            text: 'HTTP API参考',
             link: 'markdown/chapter-7/#http-api参考',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
@@ -228,14 +231,14 @@ module.exports = {
             ],
           },
           {
-            text: '8 CoolawChain Java SDK参考',
+            text: 'CoolawChain Java SDK参考',
             link: 'markdown/chapter-8/#coolawchain-java-sdk参考',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
             items: [
               {
                 text: '8.1 com.coolawchain.sdk.file',
-                link: 'markdown/chapter-8/#comcoolawchainsdkfile',
+                link: 'markdown/chapter-8/#com.coolawchain.sdk.file',
                 items: [
                   {
                     text: '8.1.1 FileUpload',
@@ -289,147 +292,149 @@ module.exports = {
               },
               {
                 text: '8.2 com.coolawchain.sdk.structdata',
-                link: 'markdown/chapter-8/#comcoolawchainsdkstructdata',
+                link: 'markdown/chapter-8/chapter-8.1/#com.coolawchain.sdk.structdata',
                 items: [
                   {
                     text: '8.2.1 DataUpload',
-                    link: 'markdown/chapter-8/#dataupload',
+                    link: 'markdown/chapter-8/chapter-8.1/#dataupload',
                   },
                   {
                     text: '8.2.2 DataModify',
-                    link: 'markdown/chapter-8/#datamodify',
+                    link: 'markdown/chapter-8/chapter-8.1/#datamodify',
                   },
                   {
                     text: '8.2.3 DataAuthorise',
-                    link: 'markdown/chapter-8/#dataauthorise',
+                    link: 'markdown/chapter-8/chapter-8.1/#dataauthorise',
                   },
                   {
                     text: '8.2.4 DataFetch',
-                    link: 'markdown/chapter-8/#datafetch',
+                    link: 'markdown/chapter-8/chapter-8.1/#datafetch',
                   },
                   {
                     text: '8.2.5 DataDelete',
-                    link: 'markdown/chapter-8/#datadelete',
+                    link: 'markdown/chapter-8/chapter-8.1/#datadelete',
                   },
                   {
                     text: '8.2.6 DataDigestCheck',
-                    link: 'markdown/chapter-8/#datadigestcheck',
+                    link: 'markdown/chapter-8/chapter-8.1/#datadigestcheck',
                   },
                   {
                     text: '8.2.7 DataVersionsFetch',
-                    link: 'markdown/chapter-8/#dataversionsfetch',
+                    link: 'markdown/chapter-8/chapter-8.1/#dataversionsfetch',
                   },
                   {
                     text: '8.2.8 DataRightsFetch',
-                    link: 'markdown/chapter-8/#datarightsfetch',
+                    link: 'markdown/chapter-8/chapter-8.1/#datarightsfetch',
                   },
                 ],
               },
               {
                 text: '8.3 com.coolawchain.sdk.contract',
-                link: 'markdown/chapter-8/#comcoolawchainsdkcontract',
+                link: 'markdown/chapter-8/chapter-8.1/#comcoolawchainsdkcontract',
                 items: [
                   {
                     text: '8.3.1 ContractCall',
-                    link: 'markdown/chapter-8/#contractcall',
+                    link: 'markdown/chapter-8/chapter-8.1/#contractcall',
                   },
                 ],
               },
               {
                 text: '8.4 com.coolawchain.sdk.model',
-                link: 'markdown/chapter-8/#comcoolawchainsdkmodel',
+                link: 'markdown/chapter-8/chapter-8.2/#com.coolawchain.sdk.model',
                 items: [
                   {
                     text: '8.4.1 Frontend',
-                    link: 'markdown/chapter-8/#8-4-1frontend',
+                    link: 'markdown/chapter-8/chapter-8.2/#frontend',
                   },
                   {
                     text: '8.4.2 FileTxStatus',
-                    link: 'markdown/chapter-8/#filetxstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#filetxstatus',
                   },
                   {
                     text: '8.4.3 FileMetaFetchStatus',
-                    link: 'markdown/chapter-8/#filemetafetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#filemetafetchstatus',
                   },
                   {
                     text: '8.4.4 FileFetchStatus',
-                    link: 'markdown/chapter-8/#filefetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#filefetchstatus',
                   },
                   {
                     text: '8.4.5 FileDigestCheckStatus',
-                    link: 'markdown/chapter-8/#filedigestcheckstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#filedigestcheckstatus',
                   },
                   {
                     text: '8.4.6 FileVersionsFetchStatus',
-                    link: 'markdown/chapter-8/#fileversionsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#fileversionsfetchstatus',
                   },
                   {
                     text: '8.4.7 FileRightsFetchStatus',
-                    link: 'markdown/chapter-8/#filerightsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#filerightsfetchstatus',
                   },
                   {
                     text: '8.4.8 DataTxStatus',
-                    link: 'markdown/chapter-8/#datatxstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#datatxstatus',
                   },
                   {
                     text: '8.4.9 DataFetchStatus',
-                    link: 'markdown/chapter-8/#datafetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#datafetchstatus',
                   },
                   {
                     text: '8.4.10 DataDigestCheckStatus',
-                    link: 'markdown/chapter-8/#datadigestcheckstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#datadigestcheckstatus',
                   },
                   {
                     text: '8.4.11 DataVersionsFetchStatus',
-                    link: 'markdown/chapter-8/#dataversionsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#dataversionsfetchstatus',
                   },
                   {
                     text: '8.4.12 DataRightsFetchStatus',
-                    link: 'markdown/chapter-8/#datarightsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#datarightsfetchstatus',
                   },
                   {
                     text: '8.4.13 ContractCallStatus',
-                    link: 'markdown/chapter-8/#contractcallstatus',
+                    link: 'markdown/chapter-8/chapter-8.2/#contractcallstatus',
                   },
                 ],
               },
               {
                 text: '8.5 com.coolawchain.sdk.exceptions',
-                link: 'markdown/chapter-8/#comcoolawchainsdkexceptions',
+                link: 'markdown/chapter-8/chapter-8.2/#com.coolawchain.sdk.exceptions',
                 items: [
                   {
                     text: '8.5.1 HttpCodeErrorException',
-                    link: 'markdown/chapter-8/#httpcodeerrorexception',
+                    link: 'markdown/chapter-8/chapter-8.2/#httpcodeerrorexception',
                   },
                   {
                     text: '8.5.2 FetchException',
-                    link: 'markdown/chapter-8/#fetchexception',
+                    link: 'markdown/chapter-8/chapter-8.2/#fetchexception',
                   },
                   {
                     text: '8.5.3 TxException',
-                    link: 'markdown/chapter-8/#txexception',
+                    link: 'markdown/chapter-8/chapter-8.2/#txexception',
                   },
                 ],
               },
               {
                 text: '8.6 com.coolawchain.sdk.utils',
-                link: 'markdown/chapter-8/#comcoolawchainsdkutils',
+                link: 'markdown/chapter-8/chapter-8.2/#com.coolawchain.sdk.utils',
                 items: [
                   {
                     text: '8.6.1 CryptoUtil',
-                    link: 'markdown/chapter-8/#cryptoutil',
+                    link: 'markdown/chapter-8/chapter-8.2/#cryptoutil',
                   },
                   {
                     text: '8.6.2 SM4Util',
-                    link: 'markdown/chapter-8/#sm4util',
+                    link: 'markdown/chapter-8/chapter-8.2/#sm4util',
                   },
                 ],
               },
             ],
           },
           {
-            text: '9 消息信息',
+            text: '消息信息',
             link: 'markdown/chapter-9/#消息信息',
+            items: [
+            ],
           },
         ],
     }

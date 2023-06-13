@@ -76,7 +76,7 @@ txHash = 3; //上链交易hash }
   * 调用方法
 
     
-    
+~~~shell    
     curl --request POST 'http://localhost:8000/fbs/clt/pbST.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -87,7 +87,7 @@ txHash = 3; //上链交易hash }
            "senderSignTs":1600328025054,
            "txSenderSign": "a5d9b3915aaecfb3c5f0197d833bc7b2513efc9533e16590868649b3a1a7605b6d2e78ac82932b98f5a24679bb2da51370435292c7bdf934979b9c9c63d6"
         }'
-    
+~~~    
 
 | "data-raw"为ReqSendTx（Protobuf Message）的JSON格式序列化结果 |
 
@@ -161,7 +161,7 @@ blockTimestamp = 2; //上链交易所在区块的生成时间戳，datetime对�
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbGFS.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -170,7 +170,7 @@ blockTimestamp = 2; //上链交易所在区块的生成时间戳，datetime对�
     --data-raw '{
            "txHash":"9b3915aaecfb3c5f0197d833e16590868649b3a1a7605b6d2e78ac82932b9c1bc4679bb2da513704"
         }'
-    
+~~~    
 
 | "data-raw"为ReqFileTxStatus（Protobuf Message）的JSON格式序列化结果 |
 
@@ -242,7 +242,7 @@ blockTimestamp = 2; //上链交易所在区块的生成时间戳，datetime对�
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbGDS.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -251,7 +251,7 @@ blockTimestamp = 2; //上链交易所在区块的生成时间戳，datetime对�
     --data-raw '{
            "txHash":"9b3915aaecfb3c5f0197d833e16590868649b3a1a7605b6d2e78ac82932b9c1bc4679bb2da513704"
         }'
-    
+~~~    
 
 | "data-raw"为ReqDataTxStatus（Protobuf Message）的JSON格式序列化结果 |
 
@@ -324,7 +324,7 @@ blockTimestamp = 2; //上链交易所在区块的生成时间戳，datetime对�
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbGCS.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -333,7 +333,7 @@ blockTimestamp = 2; //上链交易所在区块的生成时间戳，datetime对�
     --data-raw '{
            "txHash":"9b3915aaecfb3c5f0197d833e16590868649b3a1a7605b6d2e78ac82932b9c1bc4679bb2da513704"
         }'
-    
+~~~    
 
 | "data-raw"为ReqContractTxStatus（Protobuf Message）的JSON格式序列化结果 |
 
@@ -386,7 +386,7 @@ message RespGenFileUploadTxBody{ int32 retCode = 1; //返值码 string retMsg = 
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFUT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -410,7 +410,7 @@ message RespGenFileUploadTxBody{ int32 retCode = 1; //返值码 string retMsg = 
            "readerIDs":["ebc370d64ad368ddb804b88ff3224376408cb7b8", 
                       "1eb48b2896288b28962e5021b73bac4a437878c0"]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFileUploadTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -455,7 +455,7 @@ string fileID = 3; //文件链上ID string txHash = 4; //交易hash }
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbUF.do' \
     --header 'Content-Type: multipart/form-data' \
     --form 'fileData=@文件本地全路径' \
@@ -463,7 +463,7 @@ string fileID = 3; //文件链上ID string txHash = 4; //交易hash }
     --form sysSign = 调用接口的业务系统数字身份对文件保存上链交易体的签名结果' \
     --form 'txSenderSign = Tx发送者对文件保存上链交易体的签名结果' \
     --form 'txBody=文件保存上链交易体'
-    
+~~~    
 
   * 异常信息
 
@@ -510,7 +510,7 @@ message RespGenFileModifyTxBody{ int32 retCode = 1; //返值码 string retMsg = 
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFMT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -529,7 +529,7 @@ message RespGenFileModifyTxBody{ int32 retCode = 1; //返值码 string retMsg = 
            "fileSuffix":"doc",
            "fileID":" b48b289628b28962e51e80bac878c04a43721b73"
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFileModifyTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -577,7 +577,7 @@ message RespGenFileMetaUpdateTxBody { int32 retCode = 1; //返值码 string retM
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFMU.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -592,7 +592,7 @@ message RespGenFileMetaUpdateTxBody { int32 retCode = 1; //返值码 string retM
            "fileProperty":"{\"赋强公证流程\":\"启动阶段文书\"}",
            "fileSuffix":"pdf"
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFileMetaUpdateTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -657,7 +657,7 @@ int64 metaTimestamp = 13; //当前版本元数据的生成时间戳，datetime�
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFMF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -669,7 +669,7 @@ int64 metaTimestamp = 13; //当前版本元数据的生成时间戳，datetime�
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqFileMetaFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -722,7 +722,7 @@ message RespFileBodyFetch { int32 retCode = 1; //返值码 string retMsg = 2; //
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFBF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -734,7 +734,7 @@ message RespFileBodyFetch { int32 retCode = 1; //返值码 string retMsg = 2; //
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqFileBodyFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -786,7 +786,7 @@ message RespGenFileAuthoriseTxBody { int32 retCode = 1; //返值码 string retMs
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFAT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -805,7 +805,7 @@ message RespGenFileAuthoriseTxBody { int32 retCode = 1; //返值码 string retMs
             "b28962e1eb48b2885021b73bac4a437878c09628"
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFileAuthoriseTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -851,7 +851,7 @@ message RespGenFileDeleteTxBody { int32 retCode = 1; //返值码 string retMsg =
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFDT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -862,7 +862,7 @@ message RespGenFileDeleteTxBody { int32 retCode = 1; //返值码 string retMsg =
         "ownerID":"0d64ad368ebc37ddb80424376408cb7bb88ff328",
         "fileID":"1eb48bb28962e52896288021b73c04a437bac878"
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFileDeleteTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -908,7 +908,7 @@ message RespGenFileEmptyApplyTxBody { int32 retCode = 1; //返值码 string retM
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFEA.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -921,7 +921,7 @@ message RespGenFileEmptyApplyTxBody { int32 retCode = 1; //返值码 string retM
         "approverIDs":["0d64ad368ebc37ddb80424376408cb7bb88ff328", 
                    "1eb48b2896288b28962e5021b73bac4a437878c0"]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFileEmptyApplyTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -968,7 +968,7 @@ message RespGenFileEmptyApproveTxBody { int32 retCode = 1; //返值码 string re
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFEP.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -979,7 +979,7 @@ message RespGenFileEmptyApproveTxBody { int32 retCode = 1; //返值码 string re
         "approverID":"0d64ad368ebc37ddb80424376408cb7bb88ff328",
         "fileID":"1eb48bb28962e52896288021b73c04a437bac878"
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFileEmptyApproveTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1032,7 +1032,7 @@ message RespFileDigestCheck { int32 retStatus = 1; //处理状态编码 int32 re
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFDC.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1043,7 +1043,7 @@ message RespFileDigestCheck { int32 retStatus = 1; //处理状态编码 int32 re
         "versionID":"89621eb48bb2e52896288021b73c7bac87804a43",
         "fileDigest":"2e528962889621eb48bb2e52896288021b73c7bac87804a43"
     }'
-    
+~~~    
 
 | "data-raw"为ReqFileDigestCheck（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1101,7 +1101,7 @@ versions = 4; //全部文件版本信息 } message FileVersionInfo { string vers
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFVF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1112,7 +1112,7 @@ versions = 4; //全部文件版本信息 } message FileVersionInfo { string vers
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
     }'
-    
+~~~    
 
 | "data-raw"为ReqFileVersionsFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1173,7 +1173,7 @@ readerIDs = 3; //读取者列表 repeated ReaderList readerIDsBySharer = 6;
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbFRF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1184,7 +1184,7 @@ readerIDs = 3; //读取者列表 repeated ReaderList readerIDsBySharer = 6;
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
     }'
-    
+~~~    
 
 | "data-raw"为ReqFileRightsFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1238,7 +1238,7 @@ message RespGenDataUploadTxBody { int32 retCode = 1; //返值码 string retMsg =
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDUT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1257,7 +1257,7 @@ message RespGenDataUploadTxBody { int32 retCode = 1; //返值码 string retMsg =
            "readerIDs":["0d64ad368ebc37ddb80424376408cb7bb88ff328", 
                       "1eb48b2896288b28962e5021b73bac4a437878c0"]
         }'
-    
+~~~    
 
 | "data-raw"为ReqGenDataUploadTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1304,7 +1304,7 @@ message RespGenDataModifyTxBody { int32 retCode = 1; //返值码 string retMsg =
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDMT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1318,7 +1318,7 @@ message RespGenDataModifyTxBody { int32 retCode = 1; //返值码 string retMsg =
            "dataDigest ":"2e52896288021b73", 
            "dataID":"1eb48bb28962e52896288021b73c04a437bac878",
         }'
-    
+~~~    
 
 | "data-raw"为ReqGenDataModifyTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1370,7 +1370,7 @@ message RespGenDataAuthoriseTxBody { int32 retCode = 1; //返值码 string retMs
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDAT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1388,7 +1388,7 @@ message RespGenDataAuthoriseTxBody { int32 retCode = 1; //返值码 string retMs
             "8b2896281eb48b28962e5021b7437878c03bac4a"
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenDataAuthoriseTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1451,7 +1451,7 @@ long uploadTime = 7; //数据上链保存时间，datetime对应的long类型 st
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDFR.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1463,7 +1463,7 @@ long uploadTime = 7; //数据上链保存时间，datetime对应的long类型 st
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqDataFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1509,7 +1509,7 @@ message RespGenDataDeleteTxBody { int32 retCode = 1; //返值码 string retMsg =
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDDT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1520,7 +1520,7 @@ message RespGenDataDeleteTxBody { int32 retCode = 1; //返值码 string retMsg =
         "ownerID":"0d64ad368ebc37ddb80424376408cb7bb88ff328",
         "dataID":"1eb48bb28962e52896288021b73c04a437bac878"
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenDataDeleteTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1574,7 +1574,7 @@ message RespDataDigestCheck { int32 retStatus = 1; //处理状态编码 int32 re
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDDC.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1585,7 +1585,7 @@ message RespDataDigestCheck { int32 retStatus = 1; //处理状态编码 int32 re
         "versionID":"89621eb48bb2e52896288021b73c7bac87804a43",
         "dataDigest":"48bb2e5289689621eb48bb2e52896288021b73c7bac87804a43"
     }'
-    
+~~~    
 
 | "data-raw"为ReqDataDigestCheck（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1643,7 +1643,7 @@ versions= 4; //全部结构数据版本信息 } message DataVersionInfo { string
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDVF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1654,7 +1654,7 @@ versions= 4; //全部结构数据版本信息 } message DataVersionInfo { string
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
     }'
-    
+~~~    
 
 | "data-raw"为ReqDataVersionsFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1714,7 +1714,7 @@ readers = 2; //授权的读取者数字身份标识列表 } message RightsInfo {
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbDRF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1725,7 +1725,7 @@ readers = 2; //授权的读取者数字身份标识列表 } message RightsInfo {
            "fetcherSignTs ":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
     }'
-    
+~~~    
 
 | "data-raw"为ReqDataRightsFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1772,7 +1772,7 @@ message RespGenContractCallTxBody { int32 retCode = 1; //返值码 string retMsg
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbCCT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1783,7 +1783,7 @@ message RespGenContractCallTxBody { int32 retCode = 1; //返值码 string retMsg
         "scAddress":"1eb48bb28962e52896288021b73c04a437bac878",
         "scParam":"{\"参数1\":\"参数值1\",\"参数2\":\"参数值2\"}"
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenContractCallTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1835,7 +1835,7 @@ message RespGenFTIssueTxBody { int32 retCode = 1; //返值码 string retMsg = 2;
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTFI.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1863,7 +1863,7 @@ message RespGenFTIssueTxBody { int32 retCode = 1; //返值码 string retMsg = 2;
             }
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFTIssueTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1911,7 +1911,7 @@ message RespGenFTTransferTxBody { int32 retCode = 1; //返值码 string retMsg =
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTFT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1931,7 +1931,7 @@ message RespGenFTTransferTxBody { int32 retCode = 1; //返值码 string retMsg =
             }
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFTTransferTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -1979,7 +1979,7 @@ message RespGenFTAddIssueTxBody { int32 retCode = 1; //返值码 string retMsg =
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTFA.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -1999,7 +1999,7 @@ message RespGenFTAddIssueTxBody { int32 retCode = 1; //返值码 string retMsg =
             }
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFTAddIssueTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2044,7 +2044,7 @@ message RespGenFTBurnTxBody { int32 retCode = 1; //返值码 string retMsg = 2;
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTFB.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2055,7 +2055,7 @@ message RespGenFTBurnTxBody { int32 retCode = 1; //返值码 string retMsg = 2;
         "tokenAddr": "368ebcb804208cb7bb88ff3284376430d64ad7dd",
         "burnSupply": 100
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFTBurnTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2101,7 +2101,7 @@ message RespGenFTAddManagerTxBody { int32 retCode = 1; //返值码 string retMsg
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTFM.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2115,7 +2115,7 @@ message RespGenFTAddManagerTxBody { int32 retCode = 1; //返值码 string retMsg
             "62e5021b73b1eb48b289a78c0b2896288c4a4378"
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFTAddManagerTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2161,7 +2161,7 @@ message RespGenFTDelManagerTxBody { int32 retCode = 1; //返值码 string retMsg
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTFD.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2175,7 +2175,7 @@ message RespGenFTDelManagerTxBody { int32 retCode = 1; //返值码 string retMsg
             "62e5021b73b1eb48b289a78c0b2896288c4a4378"
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenFTDelManagerTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2238,7 +2238,7 @@ message FTokenInfo { string tokenAddr= 1; //FT链上ID string name = 2;
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTIF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2250,7 +2250,7 @@ message FTokenInfo { string tokenAddr= 1; //FT链上ID string name = 2;
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqFTInfoFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2308,7 +2308,7 @@ message RespFTBalFetch { int32 retStatus = 1; //处理状态编码 int32 retErro
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTBF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2321,7 +2321,7 @@ message RespFTBalFetch { int32 retStatus = 1; //处理状态编码 int32 retErro
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqFTBalFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2373,7 +2373,7 @@ message RespGenNFTIssueTxBody { int32 retCode = 1; //返值码 string retMsg = 2
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTNI.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2418,7 +2418,7 @@ message RespGenNFTIssueTxBody { int32 retCode = 1; //返值码 string retMsg = 2
             }
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenNFTIssueTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2466,7 +2466,7 @@ message RespGenNFTransferTxBody { int32 retCode = 1; //返值码 string retMsg =
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTNT.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2486,7 +2486,7 @@ message RespGenNFTransferTxBody { int32 retCode = 1; //返值码 string retMsg =
             }
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenNFTransferTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2535,7 +2535,7 @@ message RespGenNFTAddIssueTxBody { int32 retCode = 1; //返值码 string retMsg 
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTNA.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2569,7 +2569,7 @@ message RespGenNFTAddIssueTxBody { int32 retCode = 1; //返值码 string retMsg 
             }
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenNFTAddIssueTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2615,7 +2615,7 @@ message RespGenNFTBurnTxBody { int32 retCode = 1; //返值码 string retMsg = 2;
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTNB.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2626,7 +2626,7 @@ message RespGenNFTBurnTxBody { int32 retCode = 1; //返值码 string retMsg = 2;
         "tokenAddr": "30d64ad7d368ebcdb804208cb72843764bb88ff3",
         "nftUnitIdes": [1,2]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenNFTBurnTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2672,7 +2672,7 @@ message RespGenNFTAddManagerTxBody { int32 retCode = 1; //返值码 string retMs
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTNM.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2686,7 +2686,7 @@ message RespGenNFTAddManagerTxBody { int32 retCode = 1; //返值码 string retMs
             "30d64ad7d368ebcd2843764bb88ff3b804208cb7"
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenNFTAddManagerTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2732,7 +2732,7 @@ message RespGenNFTDelManagerTxBody { int32 retCode = 1; //返值码 string retMs
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTND.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2746,7 +2746,7 @@ message RespGenNFTDelManagerTxBody { int32 retCode = 1; //返值码 string retMs
             "62e5021b73b1eb48b289a78c0b2896288c4a4378"
         ]
     }'
-    
+~~~    
 
 | "data-raw"为ReqGenNFTDelManagerTxBody（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2809,7 +2809,7 @@ managers = 8//NFT发行管理者的数字身份标识列表 }
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTNF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2821,7 +2821,7 @@ managers = 8//NFT发行管理者的数字身份标识列表 }
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqNFTInfoFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2884,7 +2884,7 @@ nfTokenUnits = 4; //返回的NFT个体发行信息 } message NFTokenUnit { int64
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTUF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2897,7 +2897,7 @@ nfTokenUnits = 4; //返回的NFT个体发行信息 } message NFTokenUnit { int64
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqNFTUnitInfoFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -2960,7 +2960,7 @@ nftUnitURI = 2; // NFT统一资源标识符 }
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbNBF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -2974,7 +2974,7 @@ nftUnitURI = 2; // NFT统一资源标识符 }
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqNFTBalFetch（Protobuf Message）的JSON格式序列化结果 |
 
@@ -3032,7 +3032,7 @@ message RespNFTCountFetch { int32 retStatus = 1; //处理状态编码 int32 retE
   * 调用方法
 
     
-    
+~~~shell     
     curl --request POST 'http://localhost:8000/fbs/clt/pbTCF.do' \
     --header 'Content-Type: application/json' \
     --header 'sys_sign_ts: 1600328025054' \
@@ -3045,7 +3045,7 @@ message RespNFTCountFetch { int32 retStatus = 1; //处理状态编码 int32 retE
            "fetcherSignTs":1600328025054,
     "rqFetcherSign":"8962e521d03b5b6e9fa5816afe38f0a6b6613b2f7960be403dc964194fd4f4d375f51e67e48a8e31e539c3ee4007ebfb992aa4445d809a75fa77b73c04a1eb9628802437bac8784288bb"
         }'
-    
+~~~    
 
 | "data-raw"为ReqNFTBalFetch（Protobuf Message）的JSON格式序列化结果 |
 

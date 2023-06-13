@@ -3,7 +3,7 @@
 ## 文件上链保存
 
     
-    
+ ~~~java
     import com.coolawchain.sdk.jar.model;
     import com.coolawchain.sdk.jar.file;
     import com.coolawchain.sdk.jar.cryptoUtil;
@@ -62,12 +62,12 @@
          }
          Thread.sleep(2000);
     } while (flag);
-    
+~~~
 
 ## 结构数据上链保存
 
     
-    
+ ~~~java    
     import com.coolawchain.sdk.jar.model;
     import com.coolawchain.sdk.jar.structdata;
     import com.coolawchain.sdk.jar.cryptoUtil;
@@ -174,3 +174,4 @@
     //--赋值提交上链交易的数据所有者数字身份私钥，ownerID对应的私钥
     String ownerPrivateKey = "3161be862236ae966004390908a5facb8f45763e38ce5cfb378e493f91a7873d";
     oDataUpload.submit(ownerPrivateKey);
+~~~

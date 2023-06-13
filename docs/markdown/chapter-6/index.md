@@ -40,7 +40,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     log.debug("file start");
     CountDownLatch countDownLatch = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
@@ -152,7 +152,7 @@
     fileUpload.submit(Config.OWNER_PRIVATE_KEY);
     countDownLatch.await(5, TimeUnit.MINUTES);Assertions.assertEquals(1, status[0].getErrorCode());
     log.debug("file end");
-    
+ ~~~    
 
 ### 文件元数据更新
 
@@ -161,7 +161,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch countDownLatch = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -249,7 +249,7 @@
     fileMetaUpate.submit(Config.OWNER_PRIVATE_KEY);
     countDownLatch.await();
     Assertions.assertEquals(1, status[0].getErrorCode());
-    
+ ~~~    
 
 ### 文件本体更新
 
@@ -258,7 +258,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -372,7 +372,7 @@
     fileModify.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await(5,TimeUnit.MINUTES);
     Assertions.assertTrue(status[0].getErrorCode()==1);
-    
+ ~~~    
 
 ### 文件授权
 
@@ -389,7 +389,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -489,7 +489,7 @@
     fileAuthorise.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode()==1);
-    
+ ~~~    
 
 #### 取消授权
 
@@ -502,7 +502,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -600,7 +600,7 @@
     fileAuthorise.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode()==1);
-    
+ ~~~java    
 
 #### 权限列表获取
 
@@ -612,7 +612,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileRightsFetchStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -662,7 +662,7 @@
     FileAuthorise.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode() == 1);
-    
+ ~~~    
 
 ### 文件元数据获取
 
@@ -673,7 +673,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileMetaFetchStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -731,7 +731,7 @@
     fileFetch.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode() == 1);
-    
+ ~~~    
 
 ### 文件本体获取
 
@@ -740,7 +740,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileFetchStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -782,7 +782,7 @@
     fileFetch.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode() == 1);
-    
+ ~~~    
 
 ### 文件删除
 
@@ -793,7 +793,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -879,7 +879,7 @@
     fileUpload.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode() == 1);
-    
+ ~~~    
 
 ### 文件本体清空
 
@@ -894,7 +894,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -988,7 +988,7 @@
     fileEmptyApply.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode() == 1);
-    
+ ~~~    
 
 #### 清空审批
 
@@ -997,7 +997,7 @@
   ***调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileTxStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -1089,7 +1089,7 @@
     fileEmptyApprove.submit("7923ced7879918f7ee8e531e56fa7b1daf57473ac511f987bacd782152bf7080");
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode() == 1);
-    
+ ~~~    
 
 ### 文件验真
 
@@ -1098,7 +1098,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1115,7 +1115,7 @@
     FileDigestCheckStatus status =fileFetch.query();
     log.info("MDcheck 结果:{}",status);
     Thread.sleep(3000);
-    
+ ~~~    
 
 ### 文件追溯
 
@@ -1124,7 +1124,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     final FileVersionsFetchStatus[] status = {null};
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
@@ -1172,7 +1172,7 @@
     fileFetch.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assertions.assertTrue(status[0].getErrorCode() == 1);
-    
+ ~~~    
 
 ## 结构数据操作
 
@@ -1202,7 +1202,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     CountDownLatch cdl = new CountDownLatch(1);
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
@@ -1311,7 +1311,7 @@
     fileUpload.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dts[0].getErrorCode(),1);
-    
+ ~~~    
 
 ### 数据更新
 
@@ -1324,7 +1324,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1409,7 +1409,7 @@
     fileUpload.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dts[0].getErrorCode(),1);
-    
+ ~~~    
 
 ### 数据授权
 
@@ -1424,7 +1424,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1504,7 +1504,7 @@
     countDownLatch.await();
     //断言成功失败
     Assert.assertEquals(dataTxStatus[0].getErrorCode(),1);
-    
+ ~~~    
 
 #### 取消授权
 
@@ -1513,7 +1513,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1577,7 +1577,7 @@
     countDownLatch.await();
     //断言成功失败
     Assert.assertEquals(dataTxStatus[0].getErrorCode(),1);
-    
+ ~~~    
 
 #### 权限列表获取
 
@@ -1589,7 +1589,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1640,7 +1640,7 @@
     fileUpload.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(rightsFetchStatus[0].getErrorCode(), 1);
-    
+ ~~~    
 
 ### 数据获取
 
@@ -1652,7 +1652,7 @@
 
     
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1704,7 +1704,7 @@
     fileUpload.query(Config.OWNER_PRIVATE_KEY);
     countDownLatch.await();
     Assert.assertEquals(dFetchStatu[0].getErrorCode(),1);
-    
+ ~~~    
 
 ### 数据删除
 
@@ -1715,7 +1715,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1794,7 +1794,7 @@
     fileUpload.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dts[0].getErrorCode(),1);
-    
+ ~~~    
 
 ### 数据验真
 
@@ -1803,7 +1803,7 @@
   ***Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1821,7 +1821,7 @@
     while (true){
         Thread.sleep(10);
     }
-    
+ ~~~    
 
 ### 数据追溯
 
@@ -1830,7 +1830,7 @@
   * **Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1876,7 +1876,7 @@
     fileUpload.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dvf[0].getErrorCode(),1);
-    
+ ~~~    
 
 ## 合约操作
 
@@ -1896,7 +1896,7 @@
   * **Java调用示例**
 
     
-    
+ ~~~java    
     // Config.SYSTEM_PRIVATE_KEY --赋值业务系统数字身份私钥
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
@@ -1965,3 +1965,4 @@
     fileMetaUpate.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(ccs[0].getErrorCode(),1);
+ ~~~
