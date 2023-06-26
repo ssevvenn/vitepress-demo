@@ -700,7 +700,7 @@
             log.info("文件上链保存时间，datetime对应的int64类型:{}", fileMeta.getUploadTime());
             log.info("文件的删除状态，取值1=删除；0=有效:{}", fileMeta.getDelStatus());
             log.info("当前版本元数据的生成时间戳，datetime对应的int64类型:{}", fileMeta.getMetaTimestamp());
-            log.info("签名的信息:{}", fileMeta.getTcVerifyData());
+            log.info("签名的信息:{}", fileMeta.getTcVerifyFile());
             log.info("自动核验 任务记录,key:callId:{}", fileMeta.getVerifyRecs());
     
             //事件触发条件：在"文件元数据获取"链上操作处理彻底完成，文件元数据已成功下载。
@@ -1816,7 +1816,7 @@
     //dataDigest   --结构化数据指纹特征（文件hash）  查询的时候返回
     String dataDigest="b29a761257ad59867764539056b8dc13ce3a32e69a078767f3d854233727dc0e";
     DataUpload.setDataDigest(dataDigest);
-    DataDigestCheckStatus ret =fileUpload.query();
+    DataDigestCheckStatus ret =dataUpload.query();
     log.info("DataDigestCheckStatus:"+ret);
     while (true){
         Thread.sleep(10);
