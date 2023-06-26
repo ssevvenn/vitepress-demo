@@ -1212,7 +1212,7 @@
     //        RandomKeyPairPool randomKeyPairPool = new RandomKeyPairPool(1);
     //        frontend.setKeyPairPool(randomKeyPairPool);
     final DataTxStatus[] dts = {new DataTxStatus()};
-    DataUpload fileUpload = new DataUpload(frontend, Config.BUSINESS_DOMAIN_ID) {
+    DataUpload DataUpload = new DataUpload(frontend, Config.BUSINESS_DOMAIN_ID) {
     
         @Override
         public void onTxBlockConfirm(DataTxStatus dUploadStatus, Object context) {
@@ -1296,19 +1296,19 @@
         + "\"时间戳\":\"2022年3月1日 13:49:51\"\n"
         + "}";
     
-    fileUpload.setDataContent(new StringBuilder().append(data));
+    DataUpload.setDataContent(new StringBuilder().append(data));
     
-    fileUpload.setDataProperty(new StringBuilder().append("DataProperty"));
+    DataUpload.setDataProperty(new StringBuilder().append("DataProperty"));
     
     Client.RoleItem.Builder roleItem1 = Client.RoleItem.newBuilder();
     //Config.MANAGER_ADDRESS --管理者地址
     roleItem1.setAddr(Config.MANAGER_ADDRESS);
     
-    fileUpload.setOwners(new Client.RoleItem[]{roleItem1.build()});
-    fileUpload.setReaders(new Client.RoleItem[]{roleItem1.build()});
-    fileUpload.setSharers(new Client.RoleItem[]{roleItem1.build()});
+    DataUpload.setOwners(new Client.RoleItem[]{roleItem1.build()});
+    DataUpload.setReaders(new Client.RoleItem[]{roleItem1.build()});
+    DataUpload.setSharers(new Client.RoleItem[]{roleItem1.build()});
     //Config.OWNER_PRIVATE_KEY  --用户私钥
-    fileUpload.submit(Config.OWNER_PRIVATE_KEY);
+    DataUpload.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dts[0].getErrorCode(),1);
  ~~~    
@@ -1332,7 +1332,7 @@
     final DataTxStatus[] dts = {new DataTxStatus()};
     
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY,Config.FRONT_SERVER_URL);
-    DataModify fileUpload = new DataModify(frontend,Config.BUSINESS_DOMAIN_ID) {
+    DataModify DataUpload = new DataModify(frontend,Config.BUSINESS_DOMAIN_ID) {
     
         @Override
         public void onTxBlockConfirm(DataTxStatus dUploadStatus, Object context) {
@@ -1399,14 +1399,14 @@
         }
     };
     // Config.DATA_ID --数据ID
-    fileUpload.setDataID(Config.DATA_ID);
+    DataUpload.setDataID(Config.DATA_ID);
     //要更新的结构数据内容
-    fileUpload.setDataContent(new StringBuilder("爱丽丝1"));
+    DataUpload.setDataContent(new StringBuilder("爱丽丝1"));
     // 要更新结构数据的附属属
-    fileUpload.setDataProperty( new StringBuilder("sdfsafds"));
+    DataUpload.setDataProperty( new StringBuilder("sdfsafds"));
     //进行结构数据更新上链操作提交
     //Config.OWNER_PRIVATE_KEY --赋值结构数据所有者数字身份私钥，ownerID对应的私钥
-    fileUpload.submit(Config.OWNER_PRIVATE_KEY);
+    DataUpload.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dts[0].getErrorCode(),1);
  ~~~    
@@ -1431,7 +1431,7 @@
     CountDownLatch countDownLatch = new CountDownLatch(1);
     final DataTxStatus[] dataTxStatus = {new DataTxStatus()};
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY,Config.FRONT_SERVER_URL);
-    DataAuthorise fileUpload = new DataAuthorise(frontend,Config.BUSINESS_DOMAIN_ID) {
+    DataAuthorise DataUpload = new DataAuthorise(frontend,Config.BUSINESS_DOMAIN_ID) {
     
         @Override
         public void onTxBlockConfirm(DataTxStatus dUploadStatus, Object context) {
@@ -1483,7 +1483,7 @@
     //Config.MANAGER_ADDRESS --被授权用户地址
     String address = Config.MANAGER_ADDRESS;
     String dataID= "0e9287f776ee83fa9ff64507c82d2e4f9418330c";
-    fileUpload.setDataID(dataID);
+    DataUpload.setDataID(dataID);
     Client.RoleItem.Builder roleItem = Client.RoleItem.newBuilder();
     roleItem.setAddr(address);
     
@@ -1492,14 +1492,14 @@
     roleItem1.setAddr("6683906ee504b014bb5cad396b0261c0eb294a21");
     
     //读权限
-    fileUpload.setReaders(new Client.RoleItem[] {roleItem.build(),roleItem1.build()});
+    DataUpload.setReaders(new Client.RoleItem[] {roleItem.build(),roleItem1.build()});
     
     // 分享权限
-    fileUpload.setSharers(new Client.RoleItem[] {roleItem.build(),roleItem1.build()});
+    DataUpload.setSharers(new Client.RoleItem[] {roleItem.build(),roleItem1.build()});
     
     //上链操作
     //Config.OWNER_PRIVATE_KEY  --用户私钥
-    fileUpload.submit(Config.OWNER_PRIVATE_KEY);
+    DataUpload.submit(Config.OWNER_PRIVATE_KEY);
     //等待callback信息
     countDownLatch.await();
     //断言成功失败
@@ -1520,7 +1520,7 @@
     CountDownLatch countDownLatch = new CountDownLatch(1);
     final DataTxStatus[] dataTxStatus = {new DataTxStatus()};
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY,Config.FRONT_SERVER_URL);
-    DataAuthorise fileUpload = new DataAuthorise(frontend,Config.BUSINESS_DOMAIN_ID) {
+    DataAuthorise DataUpload = new DataAuthorise(frontend,Config.BUSINESS_DOMAIN_ID) {
     
         @Override
         public void onTxBlockConfirm(DataTxStatus dUploadStatus, Object context) {
@@ -1566,13 +1566,13 @@
     };
     //被授权的地址
     String dataID= "2cf386470039706fcfc6bbbf16aeaaf3956bfecd";
-    fileUpload.setDataID(dataID);
+    DataUpload.setDataID(dataID);
     //需要被删除的被授权地址
     String [] removeList = {"6683906ee504b014bb5cad396b0261c0eb294a28"};
     //删除权限操作，可以和添加权限操作同时执行
-    fileUpload.removeReaders(removeList);
+    DataUpload.removeReaders(removeList);
     //上链操作
-    fileUpload.submit(Config.OWNER_PRIVATE_KEY);
+    DataUpload.submit(Config.OWNER_PRIVATE_KEY);
     //等待callback信息
     countDownLatch.await();
     //断言成功失败
@@ -1596,7 +1596,7 @@
     CountDownLatch cdl = new CountDownLatch(1);
     final DataRightsFetchStatus[] rightsFetchStatus = {new DataRightsFetchStatus()};
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY, Config.FRONT_SERVER_URL);
-    DataRightsFetch fileUpload = new DataRightsFetch(frontend, Config.BUSINESS_DOMAIN_ID) {
+    DataRightsFetch DataUpload = new DataRightsFetch(frontend, Config.BUSINESS_DOMAIN_ID) {
     
     
        @Override
@@ -1634,10 +1634,10 @@
        }
     };
     // Config.DATA_ID  --指定获取权限列表的链上结构数据的结构数据链上ID
-    fileUpload.setDataID(Config.DATA_ID);
+    DataUpload.setDataID(Config.DATA_ID);
     //进行"结构数据权限列表获取"上链操作提交
     //Config.OWNER_PRIVATE_KEY --用户私钥
-    fileUpload.query(Config.OWNER_PRIVATE_KEY);
+    DataUpload.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(rightsFetchStatus[0].getErrorCode(), 1);
  ~~~    
@@ -1659,7 +1659,7 @@
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY,Config.FRONT_SERVER_URL);
     CountDownLatch countDownLatch = new CountDownLatch(1);
     final DataFetchStatus[] dFetchStatu = {new DataFetchStatus()};
-    DataFetch fileUpload = new DataFetch(frontend,Config.BUSINESS_DOMAIN_ID) {
+    DataFetch DataUpload = new DataFetch(frontend,Config.BUSINESS_DOMAIN_ID) {
         @Override
         public void onSuccess(DataFetchStatus dFetchStatus, Object context) {
             //事件触发条件：在"数据获取"链上操作处理彻底完成，数据已成功下载。
@@ -1699,9 +1699,9 @@
         }
     };
     //Config.DATA_ID   --数据唯一ID
-    fileUpload.setDataID(Config.DATA_ID);
+    DataUpload.setDataID(Config.DATA_ID);
     //Config.OWNER_PRIVATE_KEY  --用户私钥
-    fileUpload.query(Config.OWNER_PRIVATE_KEY);
+    DataUpload.query(Config.OWNER_PRIVATE_KEY);
     countDownLatch.await();
     Assert.assertEquals(dFetchStatu[0].getErrorCode(),1);
  ~~~    
@@ -1722,7 +1722,7 @@
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY,Config.FRONT_SERVER_URL);
     CountDownLatch cdl = new CountDownLatch(1);
     final DataTxStatus[] dts = {new DataTxStatus()};
-    DataDelete fileUpload = new DataDelete(frontend,Config.BUSINESS_DOMAIN_ID) {
+    DataDelete DataUpload = new DataDelete(frontend,Config.BUSINESS_DOMAIN_ID) {
     
         @Override
         public void onTxBlockConfirm(DataTxStatus dUploadStatus, Object context) {
@@ -1789,9 +1789,9 @@
     };
     
     // Config.DATA_ID --数据ID
-    fileUpload.setDataID(Config.DATA_ID);
+    DataUpload.setDataID(Config.DATA_ID);
     //Config.OWNER_PRIVATE_KEY  --用户私钥
-    fileUpload.submit(Config.OWNER_PRIVATE_KEY);
+    DataUpload.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dts[0].getErrorCode(),1);
  ~~~    
@@ -1808,14 +1808,14 @@
     // Config.FRONT_SERVER_URL --前置节点调用接口地址
     // Config.BUSINESS_DOMAIN_ID --业务域ID
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY,Config.FRONT_SERVER_URL);
-    DataDigestCheck fileUpload = new DataDigestCheck(frontend,Config.BUSINESS_DOMAIN_ID);
+    DataDigestCheck DataUpload = new DataDigestCheck(frontend,Config.BUSINESS_DOMAIN_ID);
     // Config.DATA_ID  --数据唯一ID
-    fileUpload.setDataID(Config.DATA_ID);
+    DataUpload.setDataID(Config.DATA_ID);
     //Config.DATA_VERSION   --数据版本
-    fileUpload.setVersionID(Config.DATA_VERSION);
+    DataUpload.setVersionID(Config.DATA_VERSION);
     //dataDigest   --结构化数据指纹特征（文件hash）  查询的时候返回
     String dataDigest="b29a761257ad59867764539056b8dc13ce3a32e69a078767f3d854233727dc0e";
-    fileUpload.setDataDigest(dataDigest);
+    DataUpload.setDataDigest(dataDigest);
     DataDigestCheckStatus ret =fileUpload.query();
     log.info("DataDigestCheckStatus:"+ret);
     while (true){
@@ -1837,7 +1837,7 @@
     CountDownLatch cdl = new CountDownLatch(1);
     final DataVersionsFetchStatus[] dvf = {new DataVersionsFetchStatus()};
     Frontend frontend = new Frontend(com.coolawchain.sdk.config.Config.SYSTEM_PRIVATE_KEY, Config.FRONT_SERVER_URL);
-    DataVersionsFetch fileUpload = new DataVersionsFetch(frontend,Config.BUSINESS_DOMAIN_ID){
+    DataVersionsFetch DataUpload = new DataVersionsFetch(frontend,Config.BUSINESS_DOMAIN_ID){
     
     
         @Override
@@ -1871,9 +1871,9 @@
     };
     
     //Config.DATA_ID  --用户唯一ID
-    fileUpload.setDataID(Config.DATA_ID);
+    DataUpload.setDataID(Config.DATA_ID);
     //Config.OWNER_PRIVATE_KEY  --用户私钥
-    fileUpload.query(Config.OWNER_PRIVATE_KEY);
+    DataUpload.query(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(dvf[0].getErrorCode(),1);
  ~~~    
@@ -1904,7 +1904,7 @@
     Frontend frontend = new Frontend(Config.SYSTEM_PRIVATE_KEY,Config.FRONT_SERVER_URL);
     CountDownLatch cdl = new CountDownLatch(1);
     final ContractCallStatus[] ccs = {new ContractCallStatus()};
-    ContractCall fileMetaUpate = new ContractCall(frontend,Config.BUSINESS_DOMAIN_ID) {
+    ContractCall DataMetaUpate = new ContractCall(frontend,Config.BUSINESS_DOMAIN_ID) {
     
         @Override
         public void onTxBlockConfirm(ContractCallStatus scCallStatus, Object context) {
@@ -1959,10 +1959,10 @@
     String callData ="0x58a40cc40000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000026331000000000000000000000000000000000000000000000000000000000000";
     //合约地址
     String scAddress ="0x778809772010E60ACeC161B8Aa965B42004033Df";
-    fileMetaUpate.setSCHexParam(callData);
-    fileMetaUpate.setSCAddress(scAddress);
+    dataMetaUpate.setSCHexParam(callData);
+    dataMetaUpate.setSCAddress(scAddress);
     //Config.OWNER_PRIVATE_KEY  --用户私钥
-    fileMetaUpate.submit(Config.OWNER_PRIVATE_KEY);
+    dataMetaUpate.submit(Config.OWNER_PRIVATE_KEY);
     cdl.await();
     Assert.assertEquals(ccs[0].getErrorCode(),1);
  ~~~
