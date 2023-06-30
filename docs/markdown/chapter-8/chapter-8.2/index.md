@@ -1057,7 +1057,7 @@ FetchFailure | 链上结构数据权限列表获取失败。
 
   * readerIDs
 
-结构数据读者。
+结构数据读取者。
 
     
 ~~~java    
@@ -1084,14 +1084,14 @@ grantorID 授权人ID
 
 ReaderIDs 读取者ID
 
-    
+
 ~~~java    
     private List\<String\> readerIDs{ set; get; }
 ~~~    
 
 ### ContractCallStatus
 
-链上合约信信息对象。合约事件回调对象。
+链上合约信息对象。合约事件回调对象。
 
 #### 属性
 

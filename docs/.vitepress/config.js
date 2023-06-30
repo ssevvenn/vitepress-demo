@@ -222,10 +222,7 @@ module.exports = {
                     text: '7.2.4 合约调用',
                     link: 'markdown/chapter-7/#合约调用',
                   },
-                  {
-                    text: '7.2.5 价值凭证操作',
-                    link: 'markdown/chapter-7/#价值凭证操作',
-                  },
+
                 ],
               },
             ],
