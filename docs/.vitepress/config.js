@@ -39,28 +39,36 @@ module.exports = {
       //   ],
       // },
       displayAllHeaders: true,
-      sidebar: [
+      aside: false,
+      // nextLinks: false,
+      // prevLinks: false,
+      // docFooter: {
+      //   prev: '上一篇',
+      //   next: '下一篇'
+      // },
+      sidebar: {
+        "/markdown": [
           {
             text: '从法链概述',
-            link: 'markdown/chapter-1/#从法链概述',
+            link: 'markdown/chapter-1/index',
             items: [
             ],
           },
           {
             text: '名词解释',
-            link: 'markdown/chapter-2/#名词解释',
+            link: 'markdown/chapter-2/index',
             items: [
             ],
           },
           {
             text: '调用环境',
-            link: 'markdown/chapter-3/#调用环境',
+            link: 'markdown/chapter-3/index',
             items: [
             ],
           },
           {
             text: '快速入门教程',
-            link: 'markdown/chapter-4/#快速入门教程',
+            // link: 'markdown/chapter-4/#快速入门教程',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
             items: [
@@ -76,7 +84,7 @@ module.exports = {
           },
           {
             text: '链上操作调用基本步骤',
-            link: 'markdown/chapter-5/#链上操作调用基本步骤',
+            // link: 'markdown/chapter-5/#链上操作调用基本步骤',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
             items: [
@@ -92,101 +100,101 @@ module.exports = {
           },
           {
             text: '链上操作',
-            link: 'markdown/chapter-6/#链上操作',
+            // link: 'markdown/chapter-6/#链上操作',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
             items: [
               {
                 text: '6.1 调用前置条件',
-                link: 'markdown/chapter-6/#调用前置条件',
+                link: 'markdown/chapter-6/chapter-6.1/#调用前置条件',
               },
               {
                 text: '6.2 文件操作',
-                link: 'markdown/chapter-6/#文件操作',
+                link: 'markdown/chapter-6/chapter-6.1/#文件操作',
                 items: [
                   {
                     text: '6.2.1 文件保存',
-                    link: 'markdown/chapter-6/#文件保存',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件保存',
                   },
                   {
                     text: '6.2.2 文件元数据更新',
-                    link: 'markdown/chapter-6/#文件元数据更新',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件元数据更新',
                   },
                   {
                     text: '6.2.3 文件本体更新',
-                    link: 'markdown/chapter-6/#文件本体更新',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件本体更新',
                   },
                   {
                     text: '6.2.4 文件授权',
-                    link: 'markdown/chapter-6/#文件授权',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件授权',
                   },
                   {
                     text: '6.2.5 文件元数据获取',
-                    link: 'markdown/chapter-6/#文件元数据获取',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件元数据获取',
                   },
                   {
                     text: '6.2.6 文件本体获取',
-                    link: 'markdown/chapter-6/#文件本体获取',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件本体获取',
                   },
                   {
                     text: '6.2.7 文件删除',
-                    link: 'markdown/chapter-6/#文件删除',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件删除',
                   },
                   {
                     text: '6.2.8 文件本体清空',
-                    link: 'markdown/chapter-6/#文件本体清空',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件本体清空',
                   },
                   {
                     text: '6.2.9 文件验真',
-                    link: 'markdown/chapter-6/#文件验真',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件验真',
                   },
                   {
                     text: '6.2.10 文件追溯',
-                    link: 'markdown/chapter-6/#文件追溯',
+                    link: 'markdown/chapter-6/chapter-6.1/#文件追溯',
                   },
                 ],
               },
               {
                 text: '6.3 结构数据操作',
-                link: 'markdown/chapter-6/#结构数据操作',
+                link: 'markdown/chapter-6/chapter-6.3/#结构数据操作',
                 items: [
                   {
                     text: '6.3.1 数据保存',
-                    link: 'markdown/chapter-6/#数据保存',
+                    link: 'markdown/chapter-6/chapter-6.3/#数据保存',
                   },
                   {
                     text: '6.3.2 数据更新',
-                    link: 'markdown/chapter-6/#数据更新',
+                    link: 'markdown/chapter-6/chapter-6.3/#数据更新',
                   },
                   {
                     text: '6.3.3 数据授权',
-                    link: 'markdown/chapter-6/#数据授权',
+                    link: 'markdown/chapter-6/chapter-6.3/#数据授权',
                   },
                   {
                     text: '6.3.4 数据获取',
-                    link: 'markdown/chapter-6/#数据获取',
+                    link: 'markdown/chapter-6/chapter-6.3/#数据获取',
                   },
                   {
                     text: '6.3.5 数据删除',
-                    link: 'markdown/chapter-6/#数据删除',
+                    link: 'markdown/chapter-6/chapter-6.3/#数据删除',
                   },
                   {
                     text: '6.3.6 数据验真',
-                    link: 'markdown/chapter-6/#数据验真',
+                    link: 'markdown/chapter-6/chapter-6.3/#数据验真',
                   },
                   {
                     text: '6.3.7 数据追溯',
-                    link: 'markdown/chapter-6/#数据追溯',
+                    link: 'markdown/chapter-6/chapter-6.3/#数据追溯',
                   },
                 ],
               },
               {
                 text: '6.4 合约操作',
-                link: 'markdown/chapter-6/#合约操作',
+                link: 'markdown/chapter-6/chapter-6.3/#合约操作',
                 items: [
                   {
                     text: '6.4.1 合约方法调用',
-                    link: 'markdown/chapter-6/#合约方法调用',
+                    link: 'markdown/chapter-6/chapter-6.3/#合约方法调用',
                   },
                 ],
               },
@@ -194,234 +202,233 @@ module.exports = {
           },
           {
             text: 'HTTP API参考',
-            link: 'markdown/chapter-7/#http-api参考',
+            // link: 'markdown/chapter-7/#http-api参考',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
             items: [
               {
                 text: '7.1 接口调用业务系统身份签名确认',
-                link: 'markdown/chapter-7/#接口调用业务系统身份签名确认',
+                link: 'markdown/chapter-7/chapter-7.1/#接口调用业务系统身份签名确认',
               },
               {
                 text: '7.2 接口说明',
-                link: 'markdown/chapter-7/#接口说明',
+                link: 'markdown/chapter-7/chapter-7.1/#接口说明',
                 items: [
                   {
                     text: '7.2.1 基础上链交易操作',
-                    link: 'markdown/chapter-7/#基础上链交易操作',
+                    link: 'markdown/chapter-7/chapter-7.1/#基础上链交易操作',
                   },
                   {
                     text: '7.2.2 文件操作',
-                    link: 'markdown/chapter-7/#文件操作',
+                    link: 'markdown/chapter-7/chapter-7.1/#文件操作',
                   },
                   {
                     text: '7.2.3 结构数据操作',
-                    link: 'markdown/chapter-7/#结构数据操作',
+                    link: 'markdown/chapter-7/chapter-7.1/#结构数据操作',
                   },
                   {
                     text: '7.2.4 合约调用',
-                    link: 'markdown/chapter-7/#合约调用',
+                    link: 'markdown/chapter-7/chapter-7.2.4/#合约调用',
                   },
-
                 ],
               },
             ],
           },
           {
             text: 'CoolawChain Java SDK参考',
-            link: 'markdown/chapter-8/#coolawchain-java-sdk参考',
+            // link: 'markdown/chapter-8/#coolawchain-java-sdk参考',
             collapsible: true,    //是不是可以动态展开
             collapsed: true,      //默认是不是展开
             items: [
               {
                 text: '8.1 com.coolawchain.sdk.file',
-                link: 'markdown/chapter-8/#com.coolawchain.sdk.file',
+                link: 'markdown/chapter-8/chapter-8.1/#com.coolawchain.sdk.file',
                 items: [
                   {
                     text: '8.1.1 FileUpload',
-                    link: 'markdown/chapter-8/#fileupload',
+                    link: 'markdown/chapter-8/chapter-8.1/#fileupload',
                   },
                   {
                     text: '8.1.2 FileModify',
-                    link: 'markdown/chapter-8/#filemodify',
+                    link: 'markdown/chapter-8/chapter-8.1/#filemodify',
                   },
                   {
                     text: '8.1.3 FileMetaUpate',
-                    link: 'markdown/chapter-8/#filemetaupate',
+                    link: 'markdown/chapter-8/chapter-8.1/#filemetaupate',
                   },
                   {
                     text: '8.1.4 FileAuthorise',
-                    link: 'markdown/chapter-8/#fileauthorise',
+                    link: 'markdown/chapter-8/chapter-8.1/#fileauthorise',
                   },
                   {
                     text: '8.1.5 FileMetaFetch',
-                    link: 'markdown/chapter-8/#filemetafetch',
+                    link: 'markdown/chapter-8/chapter-8.1/#filemetafetch',
                   },
                   {
                     text: '8.1.6 FileFetch',
-                    link: 'markdown/chapter-8/#filefetch',
+                    link: 'markdown/chapter-8/chapter-8.1.6/#filefetch',
                   },
                   {
                     text: '8.1.7 FileDelete',
-                    link: 'markdown/chapter-8/#filedelete',
+                    link: 'markdown/chapter-8/chapter-8.1.6/#filedelete',
                   },
                   {
                     text: '8.1.8 FileEmptyApply',
-                    link: 'markdown/chapter-8/#fileemptyapply',
+                    link: 'markdown/chapter-8/chapter-8.1.6/#fileemptyapply',
                   },
                   {
                     text: '8.1.9 FileEmptyApprove',
-                    link: 'markdown/chapter-8/#fileemptyapprove',
+                    link: 'markdown/chapter-8/chapter-8.1.6/#fileemptyapprove',
                   },
                   {
                     text: '8.1.10 FileDigestCheck',
-                    link: 'markdown/chapter-8/#filedigestcheck',
+                    link: 'markdown/chapter-8/chapter-8.1.6/#filedigestcheck',
                   },
                   {
                     text: '8.1.11 FileVersionsFetch',
-                    link: 'markdown/chapter-8/#fileversionsfetch',
+                    link: 'markdown/chapter-8/chapter-8.1.6/#fileversionsfetch',
                   },
                   {
                     text: '8.1.12 FileRightsFetch',
-                    link: 'markdown/chapter-8/#filerightsfetch',
+                    link: 'markdown/chapter-8/chapter-8.1.6/#filerightsfetch',
                   },
                 ],
               },
               {
                 text: '8.2 com.coolawchain.sdk.structdata',
-                link: 'markdown/chapter-8/chapter-8.1/#com.coolawchain.sdk.structdata',
+                link: 'markdown/chapter-8/chapter-8.2/#com.coolawchain.sdk.structdata',
                 items: [
                   {
                     text: '8.2.1 DataUpload',
-                    link: 'markdown/chapter-8/chapter-8.1/#dataupload',
+                    link: 'markdown/chapter-8/chapter-8.2/#dataupload',
                   },
                   {
                     text: '8.2.2 DataModify',
-                    link: 'markdown/chapter-8/chapter-8.1/#datamodify',
+                    link: 'markdown/chapter-8/chapter-8.2/#datamodify',
                   },
                   {
                     text: '8.2.3 DataAuthorise',
-                    link: 'markdown/chapter-8/chapter-8.1/#dataauthorise',
+                    link: 'markdown/chapter-8/chapter-8.2/#dataauthorise',
                   },
                   {
                     text: '8.2.4 DataFetch',
-                    link: 'markdown/chapter-8/chapter-8.1/#datafetch',
+                    link: 'markdown/chapter-8/chapter-8.2/#datafetch',
                   },
                   {
                     text: '8.2.5 DataDelete',
-                    link: 'markdown/chapter-8/chapter-8.1/#datadelete',
+                    link: 'markdown/chapter-8/chapter-8.2.5/#datadelete',
                   },
                   {
                     text: '8.2.6 DataDigestCheck',
-                    link: 'markdown/chapter-8/chapter-8.1/#datadigestcheck',
+                    link: 'markdown/chapter-8/chapter-8.2.5/#datadigestcheck',
                   },
                   {
                     text: '8.2.7 DataVersionsFetch',
-                    link: 'markdown/chapter-8/chapter-8.1/#dataversionsfetch',
+                    link: 'markdown/chapter-8/chapter-8.2.5/#dataversionsfetch',
                   },
                   {
                     text: '8.2.8 DataRightsFetch',
-                    link: 'markdown/chapter-8/chapter-8.1/#datarightsfetch',
+                    link: 'markdown/chapter-8/chapter-8.2.5/#datarightsfetch',
                   },
                 ],
               },
               {
                 text: '8.3 com.coolawchain.sdk.contract',
-                link: 'markdown/chapter-8/chapter-8.1/#comcoolawchainsdkcontract',
+                link: 'markdown/chapter-8/chapter-8.2.5/#comcoolawchainsdkcontract',
                 items: [
                   {
                     text: '8.3.1 ContractCall',
-                    link: 'markdown/chapter-8/chapter-8.1/#contractcall',
+                    link: 'markdown/chapter-8/chapter-8.2.5/#contractcall',
                   },
                 ],
               },
               {
                 text: '8.4 com.coolawchain.sdk.model',
-                link: 'markdown/chapter-8/chapter-8.2/#com.coolawchain.sdk.model',
+                link: 'markdown/chapter-8/chapter-8.4/#com.coolawchain.sdk.model',
                 items: [
                   {
                     text: '8.4.1 Frontend',
-                    link: 'markdown/chapter-8/chapter-8.2/#frontend',
+                    link: 'markdown/chapter-8/chapter-8.4/#frontend',
                   },
                   {
                     text: '8.4.2 FileTxStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#filetxstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#filetxstatus',
                   },
                   {
                     text: '8.4.3 FileMetaFetchStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#filemetafetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#filemetafetchstatus',
                   },
                   {
                     text: '8.4.4 FileFetchStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#filefetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#filefetchstatus',
                   },
                   {
                     text: '8.4.5 FileDigestCheckStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#filedigestcheckstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#filedigestcheckstatus',
                   },
                   {
                     text: '8.4.6 FileVersionsFetchStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#fileversionsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#fileversionsfetchstatus',
                   },
                   {
                     text: '8.4.7 FileRightsFetchStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#filerightsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#filerightsfetchstatus',
                   },
                   {
                     text: '8.4.8 DataTxStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#datatxstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#datatxstatus',
                   },
                   {
                     text: '8.4.9 DataFetchStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#datafetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#datafetchstatus',
                   },
                   {
                     text: '8.4.10 DataDigestCheckStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#datadigestcheckstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#datadigestcheckstatus',
                   },
                   {
                     text: '8.4.11 DataVersionsFetchStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#dataversionsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#dataversionsfetchstatus',
                   },
                   {
                     text: '8.4.12 DataRightsFetchStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#datarightsfetchstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#datarightsfetchstatus',
                   },
                   {
                     text: '8.4.13 ContractCallStatus',
-                    link: 'markdown/chapter-8/chapter-8.2/#contractcallstatus',
+                    link: 'markdown/chapter-8/chapter-8.4/#contractcallstatus',
                   },
                 ],
               },
               {
                 text: '8.5 com.coolawchain.sdk.exceptions',
-                link: 'markdown/chapter-8/chapter-8.2/#com.coolawchain.sdk.exceptions',
+                link: 'markdown/chapter-8/chapter-8.4/#com.coolawchain.sdk.exceptions',
                 items: [
                   {
                     text: '8.5.1 HttpCodeErrorException',
-                    link: 'markdown/chapter-8/chapter-8.2/#httpcodeerrorexception',
+                    link: 'markdown/chapter-8/chapter-8.4/#httpcodeerrorexception',
                   },
                   {
                     text: '8.5.2 FetchException',
-                    link: 'markdown/chapter-8/chapter-8.2/#fetchexception',
+                    link: 'markdown/chapter-8/chapter-8.4/#fetchexception',
                   },
                   {
                     text: '8.5.3 TxException',
-                    link: 'markdown/chapter-8/chapter-8.2/#txexception',
+                    link: 'markdown/chapter-8/chapter-8.4/#txexception',
                   },
                 ],
               },
               {
                 text: '8.6 com.coolawchain.sdk.utils',
-                link: 'markdown/chapter-8/chapter-8.2/#com.coolawchain.sdk.utils',
+                link: 'markdown/chapter-8/chapter-8.4/#com.coolawchain.sdk.utils',
                 items: [
                   {
                     text: '8.6.1 CryptoUtil',
-                    link: 'markdown/chapter-8/chapter-8.2/#cryptoutil',
+                    link: 'markdown/chapter-8/chapter-8.4/#cryptoutil',
                   },
                   {
                     text: '8.6.2 SM4Util',
-                    link: 'markdown/chapter-8/chapter-8.2/#sm4util',
+                    link: 'markdown/chapter-8/chapter-8.4/#sm4util',
                   },
                 ],
               },
@@ -434,6 +441,7 @@ module.exports = {
             ],
           },
         ],
+      }
     }
 }
   

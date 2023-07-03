@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 # 从法链概述
 
 ![](/17731d3949f58e97eac8d5a844e0b72e.png)

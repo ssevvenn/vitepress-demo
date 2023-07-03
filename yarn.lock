@@ -428,6 +428,13 @@
   "resolved" "https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz"
   "version" "2.3.2"
 
+"git@^0.1.5":
+  "integrity" "sha512-N+bfOrXyKMU/fQtCj6D/U9MQOEN0DAA8TLHSLdUQRSWBOkeRvsjJHdrdkvcq05xO7GSDKWc3nDEGoTZ4DfCCSg=="
+  "resolved" "https://registry.npmmirror.com/git/-/git-0.1.5.tgz"
+  "version" "0.1.5"
+  dependencies:
+    "mime" "1.2.9"
+
 "jsonc-parser@^3.2.0":
   "integrity" "sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w=="
   "resolved" "https://registry.npmmirror.com/jsonc-parser/-/jsonc-parser-3.2.0.tgz"
@@ -444,6 +451,11 @@
   "integrity" "sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ=="
   "resolved" "https://registry.npmmirror.com/mark.js/-/mark.js-8.11.1.tgz"
   "version" "8.11.1"
+
+"mime@1.2.9":
+  "integrity" "sha512-WiLgbHTIq5AYUvU/Luli4mZ1bUcHpGNHyCsbl+KPMg4zt+XUDpQehWjuBjdLaEvDTinvKj/FgfQt3fPoT7j08g=="
+  "resolved" "https://registry.npmmirror.com/mime/-/mime-1.2.9.tgz"
+  "version" "1.2.9"
 
 "minisearch@^6.1.0":
   "integrity" "sha512-PNxA/X8pWk+TiqPbsoIYH0GQ5Di7m6326/lwU/S4mlo4wGQddIcf/V//1f9TB0V4j59b57b+HZxt8h3iMROGvg=="

@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 # 快速入门教程
 
 ## 文件上链保存
